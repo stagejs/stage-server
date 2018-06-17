@@ -1,5 +1,3 @@
-import types from '../../common/types'
-
 const form = {
     // todo 能力注入待重写
     //ability: ['sortable', 'deleteable'],
@@ -7,7 +5,7 @@ const form = {
     editor: [
         {
             /// 配置类型
-            type: types.button,
+            type: 'button',
 
             title: '新增字段',
     
@@ -26,7 +24,7 @@ const form = {
         },
         {
             /// 配置类型
-            type: types.group,
+            type: 'group',
 
             title: '表单修改测试',
     
@@ -49,17 +47,17 @@ const form = {
             /// itemN => group
             group: [
                 {
-                    type: types.text,
+                    type: 'text',
                     title: '字段名称',
                     uri: 'title'
                 },
                 {
-                    type: types.text,
+                    type: 'text',
                     title: '字段Key',
                     uri: 'key'
                 },
                 {
-                    type: types.text,
+                    type: 'text',
                     title: '修改placeholder',
                     uri: 'placeholder'
                 }

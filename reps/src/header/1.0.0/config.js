@@ -1,11 +1,9 @@
-import types from '../../common/types'
-
 const header = {
 
     editor: [
         {
             /// 字段配置类型
-            type: types.text,
+            type: 'text',
     
             /// 字段标题
             title: 'title',

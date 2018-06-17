@@ -12,6 +12,7 @@
 const path = require('path')
 const glob = require('glob')
 const router = module.exports = require('koa-router')()
+const reps = find('lib/reps')
 
 router
 
@@ -26,23 +27,7 @@ router
         code: 0,
         message: 'ok',
         data: {
-            list: [
-                {
-                    name: 'lincoapp-header',
-                    version: '1.0.0',
-                    files: ['/Users/gavinning/lab/github/stage/src/list/header.vue']
-                },
-                {
-                    name: 'lincoapp-form',
-                    version: '1.0.0',
-                    files: ['/Users/gavinning/lab/github/stage/src/list/form.vue']
-                },
-                {
-                    name: 'lincoapp-footer',
-                    version: '1.0.0',
-                    files: ['/Users/gavinning/lab/github/stage/src/list/footer.vue']
-                },
-            ]
+            list: reps.mods
         }
     }
 })

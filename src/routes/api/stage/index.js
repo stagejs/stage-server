@@ -9,8 +9,8 @@
  *
  */
 
-const path = require('path')
-const glob = require('glob')
+const reps = find('lib/reps')
+const compiler = find('lib/compiler')
 const router = module.exports = require('koa-router')()
 
 router
@@ -22,7 +22,13 @@ router
 })
 
 .post('/project', ctx => {
-    const data = req.body
+    const project = ctx.request.body
 
-    ctx.body = data
+    project.mods = reps.getMods(project.mods)
+    // 执行编译
+    compiler(project, {}, (err) => {
+        console.log(err, 'done')
+    })
+
+    ctx.body = project
 })

@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+global.find = require('../lib/find')
+
 /**
  * Module dependencies.
  */

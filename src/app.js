@@ -1,5 +1,6 @@
 const Koa = require('koa')
 const app = new Koa()
+const env = require('./config/env')
 const views = require('koa-views')
 const json = require('koa-json')
 const onerror = require('koa-onerror')
@@ -9,6 +10,9 @@ const routes = require('./routes')
 
 // error handler
 onerror(app)
+
+// set env
+app.env = env.env
 
 // middlewares
 app.use(bodyparser({
@@ -28,6 +32,11 @@ app.use(async (ctx, next) => {
     await next()
     const ms = new Date() - start
     console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
+})
+
+app.use(async (ctx, next) => {
+    ctx.set('Access-Control-Allow-Origin', '*')
+    await next()
 })
 
 // routes

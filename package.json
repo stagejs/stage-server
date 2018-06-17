@@ -9,7 +9,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "aimee-extend": "^1.0.1",
     "debug": "^2.6.3",
+    "glob": "^7.1.2",
+    "global-env": "^0.3.0",
     "koa": "^2.2.0",
     "koa-bodyparser": "^3.2.0",
     "koa-convert": "^1.2.0",
@@ -20,7 +23,8 @@
     "koa-static": "^3.0.0",
     "koa-views": "^5.2.1",
     "pug": "^2.0.0-rc.1",
-    "stylus": "0.42.3"
+    "stylus": "0.42.3",
+    "vpm-config": "^3.0.1"
   },
   "devDependencies": {
     "glob": "^7.1.2",
