@@ -1,0 +1,1 @@
+const commonTest = 123
